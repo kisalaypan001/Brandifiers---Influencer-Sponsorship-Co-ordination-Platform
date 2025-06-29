@@ -123,3 +123,6 @@
 ## 🌟 Thank you for visiting this project!  
 *Feel free to fork, star ⭐, or contribute!*
 
+_This project was created as part of academic coursework and is shared here for learning and portfolio purposes only. Not to be copied for submission._
+
+
