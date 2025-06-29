@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Activity Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .summary {
+            margin-bottom: 20px;
+        }
+        .summary p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table th, table td {
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        table th {
+            background-color: #f4f4f4;
+        }
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Monthly Activity Report</h1>
+        <h2>{{ sponsor.name }}</h2>
+        <p><strong>Report Date:</strong> {{ report_date }}</p>
+
+        <div class="summary">
+            <h3>Summary</h3>
+            <p><strong>Total Campaigns:</strong> {{ total_campaigns }}</p>
+            <p><strong>Total Advertisements:</strong> {{ total_ads }}</p>
+            <p><strong>Total Budget Used:</strong> ${{ total_budget_used }}</p>
+            <p><strong>Remaining Budget:</strong> ${{ remaining_budget }}</p>
+            <p><strong>Sales Growth:</strong> {{ sales_growth }}</p>
+        </div>
+
+        <h3>Campaign Details</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Campaign Name</th>
+                    <th>Status</th>
+                    <th>Budget</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for campaign in campaigns %}
+                <tr>
+                    <td>{{ campaign.name }}</td>
+                    <td>{{ campaign.status }}</td>
+                    <td>${{ campaign.budget }}</td>
+                    <td>{{ campaign.start_date.strftime('%Y-%m-%d') }}</td>
+                    <td>{{ campaign.end_date.strftime('%Y-%m-%d') }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h3>Advertisement Details</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ad ID</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                    <th>Date Completed</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ad_request in ad_requests %}
+                <tr>
+                    <td>{{ ad_request.id }}</td>
+                    <td>{{ ad_request.type }}</td>
+                    <td>{{ ad_request.status }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="footer">
+            <p>Thank you for using our service!</p>
+        </div>
+    </div>
+</body>
+</html>
