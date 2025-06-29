@@ -8,8 +8,7 @@
 ## 👨‍💻 Author:
 
 **Kisalay Pan**  
-Roll No: 22f2001094  
-📧 Email: [22f2001094@ds.study.iitm.ac.in](mailto:22f2001094@ds.study.iitm.ac.in)
+📧 Email: [kisalay.pan003@gmail.com](mailto:kisalay.pan003@gmail.com)
 
 ---
 
@@ -116,10 +115,8 @@ Roll No: 22f2001094
 
 ## 🎥 Project Presentation:
 
-- 📺 **YouTube Demo:** [Link Here](https://your-youtube-link.com)  
+- 📺 **YouTube Demo:** [Link Here](https://youtu.be/st5e10Ko9ZI)  
 - 📂 **Drive Folder:** [Link Here](https://drive.google.com/file/d/1P_afzhdtQ2WKKB08L-sPjc2R19-W9xuu/view?usp=drive_link)
-
-*(Please replace with actual links)*
 
 ---
 
